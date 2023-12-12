@@ -1,4 +1,3 @@
-import blueharb from '../../assets/blueharb.png'
 import blueharb2 from '../../assets/bbb.png'
 import creative from '../../assets/creative.png'
 import shophy from '../../assets/sophy.png'

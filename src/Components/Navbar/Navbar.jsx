@@ -1,5 +1,7 @@
 import { Link } from 'react-scroll';
 import img from '../../assets/myPhoto.png'
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaFacebook, FaGithub } from 'react-icons/fa';
 const Navbar = () => {
 
     const navItem = ['Home', 'About Me', 'Resume', 'Portfolio', 'Contact']
@@ -7,7 +9,7 @@ const Navbar = () => {
 
     const handleSetActive = (to) => {
         console.log(to);
-      };
+    };
 
     return (
         <div>
@@ -24,7 +26,21 @@ const Navbar = () => {
                                 </div>
                                 <div className="flex items-center">
                                     <div>
-                                        <h2>hello</h2>
+                                        <div className="flex justify-center gap-5">
+                                            <a href="https://twitter.com/GisanRahman09">
+                                                <h1 className="text-xl text-gray-400"><FaXTwitter /></h1>
+                                            </a>
+                                            <a href="https://www.facebook.com/gisan.rahman.528">
+                                                <h1 className="text-xl text-gray-400"><FaFacebook /></h1>
+                                            </a>
+
+                                            <a href="https://github.com/Gisan999">
+
+
+                                                <h1 className="text-xl text-gray-400"><FaGithub /></h1>
+                                            </a>
+                                        </div>
+
                                     </div>
                                     <div>
                                         <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
@@ -47,27 +63,29 @@ const Navbar = () => {
                                 </div>
                                 <div className='flex justify-center mt-32'>
 
-                                  <div className='space-y-5'>
-                                  {
-                                        navItem.map((nav, idx) => (
-                                            
-                                    <div  key={idx}>
-                                         <Link 
-                                        activeClass="active"
-                                        to={nav}
-                                        spy={true}
-                                        smooth={true}
-                                        offset={50}
-                                        duration={500}
-                                      onSetActive={handleSetActive}
-                                    >
-                                       <button className='active:text-red-500 focus:text-red-500 font-bold'>{nav}</button>
-                                    </Link>
+                                    <div className='space-y-5'>
+                                        {
+                                            navItem.map((nav, idx) => (
+
+                                                <div key={idx}>
+                                                    <Link
+                                                        activeClass="active"
+                                                        to={nav}
+                                                        spy={true}
+                                                        smooth={true}
+                                                        offset={50}
+                                                        duration={500}
+                                                        onSetActive={handleSetActive}
+                                                    >
+                                                        <button className='active:text-red-500 focus:text-red-500 font-bold'>{nav}</button>
+                                                    </Link>
+                                                </div>
+
+                                            ))
+                                        }
                                     </div>
 
-                                        ) )
-                                    }
-                                  </div>
+
 
 
                                     {/* <ul className="menu  text-lg">
@@ -92,18 +110,63 @@ const Navbar = () => {
                                         <li><a>Contact</a></li>
                                     </ul> */}
                                 </div>
+                                <div className="flex justify-center mt-80 gap-5">
+                                    <a href="https://twitter.com/GisanRahman09">
+                                        <h1 className="text-3xl text-gray-400"><FaXTwitter /></h1>
+                                    </a>
+                                    <a href="https://www.facebook.com/gisan.rahman.528">
+                                        <h1 className="text-3xl text-gray-400"><FaFacebook /></h1>
+                                    </a>
+
+                                    <a href="https://github.com/Gisan999">
+
+
+                                        <h1 className="text-3xl text-gray-400"><FaGithub /></h1>
+                                    </a>
+                                </div>
+
                             </div>
 
                         </div>
                     </div>
                 </div>
-                <div className="drawer-side">
+                <div className="drawer-side z-50">
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
+
+                    <div className='bg-black z-50 p-5 mt-12'>
+
+                        <div className='space-y-5 z-50'>
+                            {
+                                navItem.map((nav, idx) => (
+
+                                    <div key={idx}>
+                                        <Link
+                                            activeClass="active"
+                                            to={nav}
+                                            spy={true}
+                                            smooth={true}
+                                            offset={50}
+                                            duration={500}
+                                            onSetActive={handleSetActive}
+                                        >
+                                            <button className='active:text-red-500 focus:text-red-500 font-bold'>{nav}</button>
+                                        </Link>
+                                    </div>
+
+                                ))
+                            }
+                        </div>
+                    </div>
+
+
+
+                    {/* 
                     <ul className="menu p-4 w-80 min-h-full bg-black">
-                        {/* Sidebar content here */}
                         <li><a>Sidebar Item 1</a></li>
                         <li><a>Sidebar Item 2</a></li>
-                    </ul>
+                    </ul> */}
+
+
                 </div>
             </div>
         </div>
