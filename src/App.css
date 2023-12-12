@@ -91,3 +91,52 @@
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color))
 }
+
+/* another one button */
+
+.button99 {
+  width: 10em;
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge red;
+  outline: none;
+  background-color: transparent;
+  color: rgb(172, 172, 172);
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button99::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #1b1b1a;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+.button99::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #1b1b1a;
+  transition: 0.5s;
+}
+
+.button99:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+.button99:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}

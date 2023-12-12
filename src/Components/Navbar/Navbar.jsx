@@ -11,7 +11,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="drawer text-white">
+            <div className="drawer text-gray-200">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content ">
                     <div className="w-full  ">
