@@ -3,6 +3,9 @@ import Navbar from "./Components/Navbar/Navbar"
 import './App.css'
 import About from "./Components/About/About"
 import Resume from "./Components/Resume/Resume"
+import Portfolio from "./Components/Portfolio/Portfolio"
+import Contact from "./Components/Contact/Contact"
+import Footer from "./Components/Footer/Footer"
 // import { Link} from 'react-scroll';
 function App() {
 
@@ -27,6 +30,9 @@ function App() {
           </div> */}
           <About />
           <Resume />
+          <Portfolio />
+          <Contact />
+          <Footer />
         </div>
 
 

@@ -2,7 +2,7 @@ import { Link } from 'react-scroll';
 import img from '../../assets/myPhoto.png'
 const Navbar = () => {
 
-    const navItem = ['Home', 'About Me', 'What I do', 'Resume', 'Portfolio', 'Contact']
+    const navItem = ['Home', 'About Me', 'Resume', 'Portfolio', 'Contact']
 
 
     const handleSetActive = (to) => {
