@@ -1,14 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 
-const About = () => {
-    return (
-        <div id="About Me" className="bg-gray-900 py-12">
-            <h2 className="text-7xl md:text-9xl lg:text-[150px] font-bold text-center text-gray-800">ABOUT ME</h2>
-            <h2 className="relative text-center  text-2xl md:text-5xl bottom-14 md:bottom-24 lg:bottom-24 font-bold text-gray-200">Know <span className="border-b-8 border-red-600">  Me </span> More</h2>
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
-            <div className="max-w-screen-xl mx-auto my-12 ">
-                <div className="grid grid-cols-2 lg:grid-cols-6 gap-8">
-                    <div className=" col-span-4 px-5 lg:px-0">
+const About = () => {
+    useEffect(() => {
+        Aos.init();
+    }, [])
+    return (
+        <div  id="About Me" className="bg-gray-900 py-12">
+          <div data-aos="fade-up">
+          <h2 className="text-7xl md:text-9xl lg:text-[150px] font-bold text-center text-gray-800">ABOUT ME</h2>
+            <h2 className="relative text-center  text-2xl md:text-5xl bottom-14 md:bottom-24 lg:bottom-24 font-bold text-gray-200">Know <span className="border-b-8 border-red-600">  Me </span> More</h2>
+          </div>
+
+            <div data-aos="fade-up"  className="max-w-screen-xl mx-auto my-12 ">
+                <div data-aos="fade-up"  className="grid grid-cols-2 lg:grid-cols-6 gap-8">
+                    <div  data-aos="zoom-in-right" className=" col-span-4 px-5 lg:px-0">
 
                         <h2 className="text-gray-200 text-3xl font-bold">I'm <span className="text-red-500 animate-pulse">Gisan Rahman, </span> a Web Developer</h2>
 
@@ -21,7 +30,7 @@ const About = () => {
 
 
 
-                    <div className=" col-span-2 text-gray-200 space-y-3 px-5 lg:px-0">
+                    <div data-aos="zoom-in-left"  className=" col-span-2 text-gray-200 space-y-3 px-5 lg:px-0">
                         <h2 className="border-b border-gray-600 pb-2"><span className="font-bold">NAME:</span>  <span className="font-medium   ">MD.  Gisan Rahman</span></h2>
                         {/* <hr /> */}
                         <h2 className="pt-2 border-b border-gray-600 pb-2"><span className="font-bold">EMAIL:</span> <span className="text-red-500 font-medium">gisan.md.rahman@gmail.com</span></h2>
@@ -42,16 +51,16 @@ const About = () => {
 
                 </div>
 
-                <div className="grid grid-cols-3 mt-16">
-                    <div className="border-r border-gray-600">
+                <div data-aos="fade-up"  className="grid grid-cols-3 mt-16">
+                    <div data-aos="flip-right"  className="border-r border-gray-600">
                         <h2 className="text-gray-600 text-4xl md:text-5xl font-bold text-center">02 +</h2>
                         <h3 className="text-center text-gray-300  text-xl md:text-2xl pt-3 font-semibold">Years Experiance</h3>
                     </div>
-                    <div className="border-r border-gray-600">
+                    <div  data-aos="flip-left"  className="border-r border-gray-600">
                         <h2 className="text-gray-600 text-4xl md:text-5xl font-bold text-center">15 +</h2>
                         <h3 className="text-center text-gray-300 text-xl md:text-2xl pt-3 font-semibold">Happy Clients</h3>
                     </div>
-                    <div className="border-r border-gray-600">
+                    <div data-aos="flip-right"  className="border-r border-gray-600">
                         <h2 className="text-gray-600 text-4xl md:text-5xl font-bold text-center">20 +</h2>
                         <h3 className="text-center text-gray-300 text-xl md:text-2xl pt-3 font-semibold">Project Done</h3>
                     </div>

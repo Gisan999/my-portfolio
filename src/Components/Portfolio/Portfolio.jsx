@@ -3,7 +3,14 @@ import creative from '../../assets/creative.png'
 import shophy from '../../assets/sophy.png'
 import event from '../../assets/event.png'
 import { FaRegEye } from 'react-icons/fa';
+
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 const Portfolio = () => {
+    useEffect(() => {
+        Aos.init();
+    }, [])
     return (
         <div id="Portfolio" className="bg-gray-900 py-12">
             <h2 className="text-7xl md:text-9xl lg:text-[150px] font-bold text-center text-gray-800">PORTFOLIO</h2>
@@ -13,7 +20,9 @@ const Portfolio = () => {
 
             <div className="max-w-screen-xl mx-auto my-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-5 lg:px-0">
-                    <div>
+                    <div data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
 
 
                         <div className="cardContainer shadow-md shadow-red-700 w-full h-96 lg:h-96">
@@ -35,7 +44,9 @@ const Portfolio = () => {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
 
                         <div className="cardContainer shadow-md shadow-red-700 w-full h-96 lg:h-96">
                             <div className="profileDiv">
@@ -57,7 +68,9 @@ const Portfolio = () => {
                         </div>
 
                     </div>
-                    <div>
+                    <div data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
 
                         <div className="cardContainer shadow-md shadow-red-700 w-full h-96 lg:h-96">
                             <div className="profileDiv">
@@ -79,7 +92,9 @@ const Portfolio = () => {
                         </div>
 
                     </div>
-                    <div>
+                    <div data-aos="flip-left"
+                        data-aos-easing="ease-out-cubic"
+                        data-aos-duration="2000">
 
                         <div className="cardContainer shadow-md shadow-red-700 w-full h-96 lg:h-96">
                             <div className="profileDiv">

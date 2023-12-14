@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { Link } from 'react-scroll';
 import bgVideo from '../../assets/BgVideo.mp4'
 import { Typewriter } from 'react-simple-typewriter'
 const Banner = () => {
@@ -25,7 +26,18 @@ const Banner = () => {
 
                     <div>
 
+                        <Link
+                            activeClass="active"
+                            to="Contact"
+                            spy={true}
+                            smooth={true}
+                            offset={50}
+                            duration={500}
+                        //   onSetActive={handleSetActive}
+                        >
+                            {/* <li>About Me</li> */}
                         <button className="btn2">Hire Me</button>
+                        </Link>
                     </div>
 
                 </div>

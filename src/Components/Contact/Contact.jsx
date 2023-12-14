@@ -1,11 +1,16 @@
 import { FaFacebook, FaGithub, FaPhone } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 import { FaXTwitter } from "react-icons/fa6";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 const Contact = () => {
+    useEffect(() => {
+        Aos.init();
+    }, [])
     return (
         <div id="Contact" className="bg-black bg-opacity-90 py-10">
-            <h2 className="text-center text-7xl md:text-9xl text-[150px] font-bold text-gray-800">CONTACT</h2>
+            <h2 className="text-center text-7xl md:text-9xl lg:text-[150px] font-bold text-gray-800">CONTACT</h2>
             <h3 className="relative text-center  text-2xl md:text-5xl bottom-14 md:bottom-24 lg:bottom-24 font-bold text-gray-200">Get<span className="border-b-8 border-red-500">in To</span>uch</h3>
 
 
@@ -13,7 +18,7 @@ const Contact = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
 
 
-                    <div className=" lg:col-span-2 p-5">
+                    <div data-aos="zoom-out-right" className=" lg:col-span-2 p-5">
 
                         <h2 className="text-white font-extrabold text-3xl ">ADDRESS</h2>
                         <div className="text-gray-200 text-xl mt-10">
@@ -53,7 +58,7 @@ const Contact = () => {
                     </div>
 
 
-                    <div className=" lg:col-span-3">
+                    <div data-aos="zoom-out-left" className=" lg:col-span-3">
 
 
                         <div className="form-container">

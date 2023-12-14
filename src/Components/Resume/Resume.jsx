@@ -1,14 +1,21 @@
 
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 const Resume = () => {
+    useEffect(() => {
+        Aos.init();
+    }, [])
     return (
         <div id="Resume" className="bg-black bg-opacity-90 py-10">
 
-            <h2 className="text-center text-7xl md:text-9xl text-[150px] font-bold text-gray-800">SUMMARY</h2>
+            <h2 className="text-center text-7xl md:text-9xl lg:text-[150px] font-bold text-gray-800">SUMMARY</h2>
             <h3 className="relative text-center  text-2xl md:text-5xl bottom-14 md:bottom-24 lg:bottom-24 font-bold text-gray-200">Re<span className="border-b-8 border-red-500">sum</span>e</h3>
             <div className="max-w-screen-xl mx-auto px-5 lg:px-0">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    <div className=" space-y-10">
+                    <div  data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" className=" space-y-10">
                         <h2 className="text-3xl font-bold text-gray-200">My Education</h2>
 
                         <div className="bg-black-700 rounded-2xl shadow-sm shadow-red-500 outline outline-red-400 -outline-offset-8">
@@ -35,7 +42,9 @@ const Resume = () => {
                         </div>
 
                     </div>
-                    <div className=" space-y-10">
+                    <div  data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" className=" space-y-10">
                         <h2 className="text-3xl font-bold text-gray-200">My Experience</h2>
 
                         <div className="bg-black-700 rounded-2xl shadow-sm shadow-red-500 outline outline-red-400 -outline-offset-8">
@@ -67,7 +76,9 @@ const Resume = () => {
 
                 <h2 className="text-3xl py-4 mt-8 font-bold text-gray-200">SKILLS</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    <div>
+                    <div  data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                         {/* <progress className="progress progress-error w-56" value={0} max="100"></progress> */}
 
                         <div className="flex justify-between">
@@ -99,7 +110,9 @@ const Resume = () => {
 
                         <progress className="progress progress-error bg-black" value="80" max="100"></progress>
                     </div>
-                    <div>
+                    <div  data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
                         {/* <progress className="progress progress-error w-56" value={0} max="100"></progress> */}
 
                         <div className="flex justify-between">

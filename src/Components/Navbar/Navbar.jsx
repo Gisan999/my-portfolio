@@ -84,33 +84,8 @@ const Navbar = () => {
                                             ))
                                         }
                                     </div>
-
-
-
-
-                                    {/* <ul className="menu  text-lg">
-                                        <li><a>Home</a></li>
-
-
-                                        <Link
-                                            activeClass="active"
-                                            to="about"
-                                            spy={true}
-                                            smooth={true}
-                                            offset={50}
-                                            duration={500}
-                                        //   onSetActive={handleSetActive}
-                                        >
-                                            <li>About Me</li>
-                                        </Link>
-
-                                        <li><a>What I Do</a></li>
-                                        <li><a>Resume</a></li>
-                                        <li><a>Portfolio</a></li>
-                                        <li><a>Contact</a></li>
-                                    </ul> */}
                                 </div>
-                                <div className="flex justify-center mt-80 gap-5">
+                                <div className="flex justify-center mt-60 gap-5">
                                     <a href="https://twitter.com/GisanRahman09">
                                         <h1 className="text-3xl text-gray-400"><FaXTwitter /></h1>
                                     </a>
