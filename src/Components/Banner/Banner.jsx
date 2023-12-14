@@ -4,7 +4,7 @@ import bgVideo from '../../assets/BgVideo.mp4'
 import { Typewriter } from 'react-simple-typewriter'
 const Banner = () => {
     return (
-        <div id='Home'>
+        <div className='border' id='Home'>
             <div className="md:h-[700px] lg:h-[920px]  bg-black">
                 <video className='w-full h-full' src={bgVideo} autoPlay muted></video>
                 <div className='relative text-white text-center  bottom-10 md:bottom-48'>

@@ -2,15 +2,21 @@ import { Link } from 'react-scroll';
 import img from '../../assets/myPhoto.png'
 import { FaXTwitter } from 'react-icons/fa6';
 import { FaFacebook, FaGithub } from 'react-icons/fa';
+import { useState } from 'react';
 const Navbar = () => {
+    const [active, setActive] = useState('');
 
     const navItem = ['Home', 'About Me', 'Resume', 'Portfolio', 'Contact']
 
 
     const handleSetActive = (to) => {
         console.log(to);
+        const remaining = navItem.filter(data => data === to)
+        setActive(remaining);
+
     };
 
+    console.log(active);
     return (
         <div>
             <div className="drawer text-gray-200">
@@ -73,11 +79,11 @@ const Navbar = () => {
                                                         to={nav}
                                                         spy={true}
                                                         smooth={true}
-                                                        offset={50}
-                                                        duration={500}
+                                                        offset={-100}
+                                                        duration={800}
                                                         onSetActive={handleSetActive}
                                                     >
-                                                        <button className='active:text-red-500 focus:text-red-500 font-bold'>{nav}</button>
+                                                        <button className={`active:text-red-500 focus:text-red-500 font-bold`}>{nav}</button>
                                                     </Link>
                                                 </div>
 

@@ -9,13 +9,13 @@ const About = () => {
         Aos.init();
     }, [])
     return (
-        <div  id="About Me" className="bg-gray-900 py-12">
+        <div  id="About Me" className="bg-gray-900 py-20">
           <div data-aos="fade-up">
           <h2 className="text-7xl md:text-9xl lg:text-[150px] font-bold text-center text-gray-800">ABOUT ME</h2>
             <h2 className="relative text-center  text-2xl md:text-5xl bottom-14 md:bottom-24 lg:bottom-24 font-bold text-gray-200">Know <span className="border-b-8 border-red-600">  Me </span> More</h2>
           </div>
 
-            <div data-aos="fade-up"  className="max-w-screen-xl mx-auto my-12 ">
+            <div data-aos="fade-up"  className="max-w-screen-xl mx-auto my-12 overflow-x-hidden">
                 <div data-aos="fade-up"  className="grid grid-cols-2 lg:grid-cols-6 gap-8">
                     <div  data-aos="zoom-in-right" className=" col-span-4 px-5 lg:px-0">
 

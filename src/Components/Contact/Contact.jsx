@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 const Contact = () => {
-    const { register, handleSubmit, reset} = useForm();
+    const { register, handleSubmit, reset } = useForm();
     useEffect(() => {
         Aos.init();
     }, [])
@@ -20,12 +20,14 @@ const Contact = () => {
     }
 
     return (
-        <div id="Contact" className="bg-black bg-opacity-90 py-10">
+        <div id="Contact" className="bg-black bg-opacity-90 py-20 border">
             <h2 className="text-center text-7xl md:text-9xl lg:text-[150px] font-bold text-gray-800">CONTACT</h2>
             <h3 className="relative text-center  text-2xl md:text-5xl bottom-14 md:bottom-24 lg:bottom-24 font-bold text-gray-200">Get<span className="border-b-8 border-red-500">in To</span>uch</h3>
             <div className="max-w-screen-xl mx-auto my-12">
-                <div className="grid grid-cols-1 lg:grid-cols-5 gap-5">
-                    <div data-aos="zoom-out-right" className=" lg:col-span-2 p-5">
+                <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 overflow-x-hidden">
+                    <div data-aos="fade-right"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" className=" lg:col-span-2 p-5">
                         <h2 className="text-white font-extrabold text-3xl ">ADDRESS</h2>
                         <div className="text-gray-200 text-xl mt-10">
                             <h2>Ruhea,</h2>
@@ -53,17 +55,19 @@ const Contact = () => {
                             </a>
                         </div>
                     </div>
-                    <div data-aos="zoom-out-left" className=" lg:col-span-3">
+                    <div data-aos="fade-left"
+                        data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" className=" lg:col-span-3">
                         <form onSubmit={handleSubmit(notify)} className="form-container">
                             <div className="form">
                                 <span className="heading">SEND US A NOTE</span>
-                                <input required placeholder="Name" type="text" className="input"    {...register("name")}/>
+                                <input required placeholder="Name" type="text" className="input"    {...register("name")} />
                                 <input required placeholder="Email" id="mail" type="email" className="input"   {...register("email")} />
                                 <textarea required  {...register("message")} placeholder="Say Hello" rows="10" cols="30" id="message" name="message" className="textarea"></textarea>
                                 <div className="button-container">
-                                    <input value={'Send'} type="submit" className="send-button"/>
+                                    <input value={'Send'} type="submit" className="send-button" />
                                     <div className="reset-button-container">
-                                        <div onClick={()=>reset()} id="reset-btn" className="reset-button">Reset</div>
+                                        <div onClick={() => reset()} id="reset-btn" className="reset-button">Reset</div>
                                     </div>
                                 </div>
                             </div>

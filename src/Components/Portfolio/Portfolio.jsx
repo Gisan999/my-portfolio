@@ -12,7 +12,7 @@ const Portfolio = () => {
         Aos.init();
     }, [])
     return (
-        <div id="Portfolio" className="bg-gray-900 py-12">
+        <div id="Portfolio" className="bg-gray-900 py-32">
             <h2 className="text-7xl md:text-9xl lg:text-[150px] font-bold text-center text-gray-800">PORTFOLIO</h2>
             <h2 className="relative text-center  text-2xl md:text-5xl bottom-14 md:bottom-24 lg:bottom-24 font-bold text-gray-200">My <span className="border-b-8 border-red-600">wor</span>k</h2>
 
